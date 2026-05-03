@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pour Toi</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Photo d'arrière-plan */
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('photo_fond.jpg'); /* Remplace par ta photo principale */
+            background-size: cover;
+            background-position: center;
+            filter: blur(5px) brightness(0.7);
+            z-index: -1;
+        }
+
+        /* Conteneur du cœur */
+        .heart-container {
+            position: relative;
+            width: 500px;
+            height: 450px;
+            margin: 10vh auto;
+        }
+
+        .photo-heart {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border: 3px solid white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .photo-heart:hover {
+            transform: scale(1.2) z-index(10);
+            cursor: pointer;
+        }
+
+        /* Positionnement des photos pour former un cœur */
+        /* Chaque point correspond à une position X, Y */
+        .p1 { top: 50px; left: 150px; }
+        .p2 { top: 20px; left: 250px; }
+        .p3 { top: 50px; left: 350px; }
+        .p4 { top: 150px; left: 400px; }
+        .p5 { top: 250px; left: 300px; }
+        .p6 { top: 350px; left: 250px; } /* Pointe du bas */
+        .p7 { top: 250px; left: 200px; }
+        .p8 { top: 150px; left: 100px; }
+
+        .message {
+            position: absolute;
+            bottom: 50px;
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-size: 3rem;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="background"></div>
+
+    <div class="heart-container">
+        <img src="photo1.jpg" class="photo-heart p1" alt="photo">
+        <img src="photo2.jpg" class="photo-heart p2" alt="photo">
+        <img src="photo3.jpg" class="photo-heart p3" alt="photo">
+        <img src="photo4.jpg" class="photo-heart p4" alt="photo">
+        <img src="photo5.jpg" class="photo-heart p5" alt="photo">
+        <img src="photo1.jpg" class="photo-heart p6" alt="photo">
+        <img src="photo2.jpg" class="photo-heart p7" alt="photo">
+        <img src="photo3.jpg" class="photo-heart p8" alt="photo">
+    </div>
+
+    <div class="message">Je t'aime ❤️</div>
+
+</body>
+</html>
